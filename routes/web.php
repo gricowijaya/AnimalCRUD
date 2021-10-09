@@ -14,7 +14,7 @@ use App\Http\Controllers\AnimalController;
 |
 */
 
-Route::get('/daftar', [AnimalController::class, 'listAnimal'])->name('daftar-hewan');
+Route::get('/', [AnimalController::class, 'listAnimal'])->name('daftar-hewan');
 Route::get('/tambah', [AnimalController::class, 'newAnimal'])->name('tambah-data-hewan');
 Route::post('/{id}/hapus', [AnimalController::class, 'deleteAnimal'])->name('hapus-data-hewan', 'id');
 Route::get('/{id}/sunting', [AnimalController::class, 'editAnimal'])->name('edit-data-hewan', 'id');
